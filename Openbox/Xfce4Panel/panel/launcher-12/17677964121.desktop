@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=jgmenu
+GenericName=Application Menu
+Comment=Displays menu for launching installed applications
+Exec=jgmenu_run
+Terminal=false
+Icon=/home/herbert/imagens/256x256.png
+Categories=System
+StartupNotify=false
+X-XFCE-Source=file:///usr/share/applications/jgmenu.desktop
+Path=

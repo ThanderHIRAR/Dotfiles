@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Gerenciador De tarefas
+Comment=
+Exec=/home/herbert/rofi-taskmaster.sh
+Icon=/home/herbert/imagens/GNOME_System_Monitor_icon_2019.svg.png
+Path=
+Terminal=false
+StartupNotify=false

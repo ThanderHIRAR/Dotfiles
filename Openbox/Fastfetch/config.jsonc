@@ -1,0 +1,43 @@
+{
+    "modules": [
+        {
+            "type": "custom",
+            "format": " "
+        },
+        { 
+	"type": "custom", 
+	"format": "<---------------------------------------------->"
+        },
+        {
+            "type": "custom",
+            "format": "[---SHAW!---]"
+        },
+        "title",
+        "os",
+        {
+            "type": "kernel",
+            "format": "{2}"
+        },
+        "wm",
+        "uptime",
+        "font",
+        "terminal",
+        "packages",
+        "colors",
+        {
+            "type": "custom",
+            "format": "<---------------------------------------------->"
+        }
+    ],
+
+    "logo": {
+        "type": "file",
+        "source": "/home/herbert/.config/fastfetch/logo.ascii",
+        "position": "left",
+        "printRemaining": true,
+	"padding": {
+	  "top": 0
+	}
+    }
+}	
+

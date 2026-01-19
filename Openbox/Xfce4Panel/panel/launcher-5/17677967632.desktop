@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=PowerButton
+Comment=
+Exec=/home/herbert/.config/openbox/powermenu.sh
+Icon=/home/herbert/imagens/PB.png
+Path=
+Terminal=false
+StartupNotify=false

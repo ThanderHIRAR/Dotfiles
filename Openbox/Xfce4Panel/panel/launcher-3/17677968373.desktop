@@ -1,0 +1,37 @@
+[Desktop Entry]
+Name=Clock
+Name[pt]=Relógio
+Name[pt_BR]=Relógio
+Comment=Set alarms and timers, use a stopwatch, and manage world clocks
+Comment[pt]=Configurar alarmes e temporizadores, usar um cronómetro e gerir os relógios mundiais
+Comment[pt_BR]=Definir alarmes e temporizadores, use um cronômetro e gerencie relógios mundiais
+Exec=kclock
+Icon=org.kde.kclock
+Type=Application
+Terminal=false
+Actions=Timers;Stopwatch;Alarms;
+Categories=Qt;KDE;Utility;
+SingleMainWindow=true
+Keywords=kclock;timer;stopwatch;alarm;timezone;time zone;world clock;
+Keywords[pt]=kclock;temporizador;cronómetro;alarme;fuso-horário;fuso horário;relógio mundial;
+Keywords[pt_BR]=kclock;tempo;cronômetro;cronometro;alarme;fuso horário;timezone;relógio mundial;relogio;
+X-KDE-FormFactor=desktop;tablet;handset;
+X-XFCE-Source=file:///usr/share/applications/org.kde.kclock.desktop
+
+[Desktop Action Timers]
+Name=Timers
+Name[pt_BR]=Temporizadores
+Icon=player-time
+Exec=kclock --page Timers
+
+[Desktop Action Stopwatch]
+Name=Stopwatch
+Name[pt_BR]=Cronômetro
+Icon=chronometer
+Exec=kclock --page Stopwatch
+
+[Desktop Action Alarms]
+Name=Alarms
+Name[pt_BR]=Alarmes
+Icon=notifications
+Exec=kclock --page Alarms

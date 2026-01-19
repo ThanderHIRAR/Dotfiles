@@ -1,0 +1,16 @@
+/* Seleciona a janela do painel do XFCE */
+#XfcePanelWindow {
+    border: 2px solid #e9658d; /* Sua cor rosa */
+    border-radius: 12px;       /* Para alinhar com os 12px do Picom */
+    background-color: rgba(30, 30, 46, 0.74); /* Cor base do seu XML */
+}
+
+/* Make all panel buttons transparent by default */
+.xfce4-panel.background button,
+.xfce4-panel.background button.flat {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    transition: none;
+}
