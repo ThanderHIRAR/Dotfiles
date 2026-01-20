@@ -1,0 +1,51 @@
+# Example autostart file
+
+# Set background color.
+swaybg -c '#113344' >/dev/null 2>&1 &
+
+# Configure output directives such as mode, position, scale and transform.
+# Use wlr-randr to get your output names
+# Example ~/.config/kanshi/config below:
+#   profile {
+#     output HDMI-A-1 position 1366,0
+#     output eDP-1 position 0,0
+#   }
+kanshi >/dev/null 2>&1 &
+
+# Launch a panel such as yambar or waybar.
+waybar >/dev/null 2>&1 &
+
+# To delay the launch of a particular client it is suggested that the following
+# syntax is used: ( sleep X ; foo ) &
+# For example, with waybar a three second delay could be achieved with:
+#   ( sleep 3 ; waybar >/dev/null 2>&1 ) &
+
+# Enable notifications. Typically GNOME/KDE application notifications go
+# through the org.freedesktop.Notifications D-Bus API and require a client such
+# as mako to function correctly. Thunderbird is an example of this.
+mako >/dev/null 2>&1 &
+
+# Lock screen after 5 minutes; turn off display after another 5 minutes.
+#
+# Note that in the context of idle system power management, it is *NOT* a good
+# idea to turn off displays by 'disabling outputs' for example by
+# `wlr-randr --output <whatever> --off` because this re-arranges windows
+# (since a837fef). Instead use a wlr-output-power-management client such as
+# https://git.sr.ht/~leon_plickat/wlopm
+swayidle -w \
+	timeout 300 'swaylock -f -c 000000' \
+	timeout 600 'wlopm --off \*' \
+	resume 'wlopm --on \*' \
+	before-sleep 'swaylock -f -c 000000' >/dev/null 2>&1 &
+mako &
+sudo /usr/local/bin/mouse-media.py &
+wlr-randr --output DP-1 --mode 1280x1024@75.025 &
+xhost +si:localuser:root &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+mpvpaper -l background \
+        -o "--loop --no-audio --hwdec=auto-safe \
+        --panscan=1.0 \
+        --video-align-y=-1 \
+        --video-pan-x=0.03 \
+        --video-pan-y=0.03" \
+        DP-1 ~/Vídeos/Wallpapers/refuge-oneshot.mp4 &

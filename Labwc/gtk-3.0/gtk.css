@@ -1,0 +1,108 @@
+/* ===================================================== */
+/* OneShot-GTK — Tema Consolidado (Foco em Contraste)    */
+/* ===================================================== */
+
+@define-color bg_main   #050008;
+@define-color bg_alt    #0d0015;
+@define-color fg_main   #a286d2; /* Seu roxo padrão */
+@define-color accent    #9f7aea;
+@define-color border_c  alpha(#886dbf, 0.35);
+
+/* ============================= */
+/* Base e Janelas                */
+/* ============================= */
+window, .background, scrolledwindow, viewport {
+    background-color: @bg_main;
+    color: @fg_main;
+}
+
+/* ============================= */
+/* SELEÇÃO (Contraste Máximo)    */
+/* ============================= */
+/* Quando selecionado, o fundo vira o roxo do texto e o texto vira preto */
+:selected, 
+.view:selected, 
+.view:selected:focus {
+    background-color: @fg_main;
+    color: #000000; /* Texto preto para máxima visibilidade */
+    font-weight: bold; /* Opcional: deixa o texto selecionado em negrito */
+}
+
+/* Força em árvores, ícones e listas do PCManFM */
+treeview.view:selected,
+iconview.view:selected,
+.sidebar row:selected {
+    background-color: @fg_main;
+    color: #000000;
+}
+
+/* Garante que os ícones fiquem escuros sobre o fundo roxo */
+:selected image, 
+.view:selected image,
+.sidebar row:selected image {
+    color: #000000;
+}
+
+/* ============================= */
+/* Barras (Header/Toolbar)       */
+/* ============================= */
+headerbar, toolbar, statusbar {
+    background-color: @bg_alt;
+    color: @fg_main;
+    border-color: @border_c;
+}
+
+/* ============================= */
+/* Botões e Entradas             */
+/* ============================= */
+button, entry {
+    background-color: @bg_alt;
+    color: @fg_main;
+    border: 1px solid @border_c;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: alpha(@fg_main, 0.15);
+}
+
+button:active, button:checked {
+    background-color: @accent;
+    color: @bg_main;
+}
+
+/* ============================= */
+/* Ícones Simbólicos (Geral)     */
+/* ============================= */
+image.symbolic, .symbolic, 
+toolbar image, button image {
+    color: @fg_main;
+}
+
+/* ============================= */
+/* Widgets (Checks/Sliders)      */
+/* ============================= */
+check, radio {
+    border: 1px solid @border_c;
+    background-color: @bg_alt;
+    border-radius: 4px;
+}
+
+radio { border-radius: 100%; }
+
+check:checked, radio:checked {
+    background-color: @accent;
+    color: @bg_main;
+}
+
+scale contents trough {
+    background-color: @bg_alt;
+    border-radius: 10px;
+    min-height: 8px;
+}
+
+scale contents highlight {
+    background-color: @accent;
+    border-radius: 10px;
+}

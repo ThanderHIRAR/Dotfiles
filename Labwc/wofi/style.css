@@ -1,0 +1,100 @@
+/* ============================= */
+/* OneShot — Wofi Theme          */
+/* ============================= */
+
+window {
+    background-color: rgba(5, 0, 8, 0.97);
+    border: 1px solid rgba(162, 134, 210, 0.45);
+    border-radius: 14px;
+    padding: 12px;
+}
+
+/* Caixa de pesquisa */
+#input {
+    background-color: #0d0015;
+    color: #a286d2;
+
+    border: 1px solid rgba(162, 134, 210, 0.35);
+    border-radius: 10px;
+
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+/* Lista */
+#outer-box {
+    margin-top: 6px;
+}
+
+#scroll {
+    margin-top: 6px;
+}
+
+/* Cada item */
+#entry {
+    background-color: transparent;
+    color: #a286d2;
+
+    padding: 8px 10px;
+    margin-bottom: 4px;
+
+    border-radius: 8px;
+}
+
+/* Separação visual */
+#entry:not(:last-child) {
+    border-bottom: 1px solid rgba(162, 134, 210, 0.15);
+}
+
+/* Hover */
+#entry:hover {
+    background-color: rgba(159, 122, 234, 0.12);
+}
+
+/* Selecionado */
+#entry:selected {
+    background-color: #9f7aea;
+    color: #050008;
+}
+
+/* Texto secundário (descrição) */
+#entry:selected label {
+    color: #050008;
+}
+
+/* Ícones */
+#entry image {
+    margin-right: 10px;
+}
+
+/* Scrollbar */
+scrollbar trough {
+    background-color: transparent;
+}
+
+scrollbar slider {
+    background-color: rgba(159, 122, 234, 0.4);
+    border-radius: 10px;
+}
+
+/* ============================= */
+/* Ícones — FIX Wofi             */
+/* ============================= */
+
+#entry image {
+    margin-right: 10px;
+    min-width: 32px;
+    min-height: 32px;
+    opacity: 1;
+}
+
+#entry image.symbolic {
+    color: #a286d2;
+}
+
+/* Ícone selecionado */
+#entry:selected image,
+#entry:selected image.symbolic {
+    color: #050008;
+}
+

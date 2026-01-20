@@ -1,0 +1,131 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 0, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "layer": "top",
+    "position": "top",
+
+    "modules-left": [
+        "custom/padding",
+        "custom/player"
+        //"mpris"    
+    ],
+    "modules-center": [
+        "ext/workspaces",
+        "custom/sep",
+        "clock"
+        
+    ],
+    "modules-right": [
+        "pulseaudio#audio",
+        "custom/sep",
+        "pulseaudio#mic",
+        "custom/sep",
+        "network",
+        "custom/sep",
+        "bluetooth",
+        "custom/sep",
+        "custom/powerButton"
+
+    ],
+
+        "ext/workspaces": {
+            "format": "{icon}",
+            "on-click": "activate",
+            "all-outputs": true,
+            "format-icons": {
+                "default": "○",
+                "active": "◉",   
+                "urgent": ""
+        }
+    },
+        "pulseaudio#mic": {
+            "format": "{format_source}",
+            "format-source": "<span font_size='16pt' rise='-1500'></span>{volume}%",
+            "format-source-muted": "<span font_size='16pt' rise='-1500'></span>Muted",
+            "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+            "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 1%+",
+            "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 1%-",
+            "scroll-step": 1,
+            "tooltip": false
+    },
+        "pulseaudio#audio": {
+            // texto
+            "format": "<span font_size='14pt' rise='-1500'>󰋋</span> {volume}%",
+            "format-muted": "<span font_size='14pt' rise='-1500'>󰝟</span> Muted",
+            //volume máximo
+            "max-volume": 100,
+            "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+            "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+",
+            "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-",
+            "scroll-step": 1,
+            "tooltip": false
+    },
+    
+        "clock": {
+            "interval": 1,
+            "tooltip": true,
+            "format": "{:%H.%M.%S}",
+            "tooltip-format": "{:%Y-%m-%d}"
+    },
+
+        "network": {
+            "interval": 5,
+            "family": "ipv4_6",
+            "format-ethernet": "󱘖",
+            "format-disconnected": "󰈂",
+            "on-click": "/home/herbert/.config/waybar/networktoggle.sh",
+            "tooltip": false
+    },
+
+        "bluetooth": {
+            "format-on": "",
+            "format-off": "󰂲",
+            "format-connected": "󰂱",
+            "on-click":"blueman-manager",
+            "on-click-middle":"/home/herbert/.config/waybar/bluetoothtoggle.sh",
+            "tooltip": false
+    },
+
+        "custom/powerButton": {
+            "format": " ",
+            "on-click": "/home/herbert/powermenu.sh",
+            "tooltip": false
+    },
+
+        "mpris": {
+            "player": "playerctld",
+            "interval": 2,
+            "status-icons": {
+                "playing": "󰏤",
+                "paused": "󰐊",
+                "stopped": "󰓛"
+            },
+            "format": "{status_icon} {dynamic}",
+            "dynamic-order": ["title", "position", "length"],
+            "dynamic-separator": "·"
+    },
+
+        "custom/sep": {
+            "format": " ",
+            "color": "#fffff",
+            "tooltip": false
+    },
+        "custom/padding": {
+            "format": "  ",
+            "tooltip": false
+    },
+
+    "custom/player": {
+        "exec": "~/.config/waybar/player-status.sh",
+        "interval": 1,
+        "format": "{}",
+        "on-click": "playerctl play-pause",
+        "max-length": 55,
+        "tooltip": false
+    }
+}

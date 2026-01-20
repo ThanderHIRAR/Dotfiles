@@ -1,0 +1,84 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: "Noto Sans", "MesloLGS Nerd Font Mono";
+    font-size: 14px;
+}
+
+window#waybar {
+    background-color: #0d0015;
+    border: 2px solid #886dbf;
+    border-radius: 0px;
+}
+
+#custom-sep {
+    background-color: #886dbf;
+    min-width: 2px;
+    margin: 0px 6px;
+    padding: 0px;
+    font-size: 2px;
+}
+
+#pulseaudio {
+    font-size: 14px;
+    padding: 0px 0px;
+    color: #886dbf;
+}
+
+#bluetooth {
+    color: #886dbf;
+    font-size: 16px;
+}
+
+#network {
+    color: #886dbf;
+    font-size: 18px;
+}
+
+#clock {
+    color: #886dbf;
+}
+
+#custom-player {
+    color: #886dbf;
+}
+
+#workspaces button {
+    /* Aplica a cor aos ícones/números dos workspaces */
+    color: #886dbf; 
+    padding: 0 5px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0; /* Mantém o estilo quadrado */
+}
+
+#workspaces button:hover {
+    /* Remove o fundo escuro/cinza ao passar o mouse */
+    background: transparent;
+    background-color: transparent;
+    
+    /* Opcional: mantém a cor do ícone ou faz ele brilhar levemente */
+    color: #9d5fe9; 
+    box-shadow: none;
+    text-shadow: none;
+}
+
+/* Garante que o estado ativo não seja sobrescrito pelo hover */
+#workspaces button.focused:hover,
+#workspaces button.active:hover {
+    background-color: transparent;
+    color: #5f26cf;
+}
+
+#custom-powerButton {
+    background-image: url("/home/herbert/Imagens/PBpurple.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+    min-width: 20px; 
+    min-height: 20px;
+    
+    color: transparent;
+    margin: 4px 8px 4px 0px; /* 4px na direita para não colar na borda da barra */
+    padding: 0px;
+}

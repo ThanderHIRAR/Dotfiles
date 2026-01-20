@@ -1,0 +1,47 @@
+{
+    "display": {
+        "color": "38;2;136;109;191" 
+    },
+
+    "modules": [
+        {
+            "type": "custom",
+            "format": " "
+        },
+        {
+            "type": "custom",
+            "format": " "
+        },
+        { 
+	        "type": "custom", 
+	        "format": "<---------------------------------------->"
+        },
+        "title",
+        "os",
+        {
+            "type": "kernel",
+            "format": "{2}"
+        },
+        "wm",
+        "uptime",
+        "font",
+        "terminal",
+        "packages",
+        {
+            "type": "custom",
+            "format": "<---------------------------------------->"
+        }
+    ],
+
+    "logo": {
+    "type": "kitty",
+    "source": "/home/herbert/.config/fastfetch/image-removebg-preview.png",
+    "width": 25,
+    "height": 11,
+    "padding": {
+        "top": 1,
+        "left": 2
+    }
+    }
+}	
+
