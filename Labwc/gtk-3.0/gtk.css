@@ -106,3 +106,27 @@ scale contents highlight {
     background-color: @accent;
     border-radius: 10px;
 }
+/* Borda e Fundo da Janela de Login */
+#login_window {
+    background-color: #0d0015; /* Cor bg_alt confirmada */
+    border: 2px solid #886dbf; /* Sua borda solicitada */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Borda e Fundo da Barra Superior */
+#panel_window {
+    background-color: #0d0015;
+    border-bottom: 1px solid #886dbf;
+    color: #a286d2;
+}
+/* Espaçamento entre os ícones da barra */
+#panel_window menubar > menuitem {
+    padding: 0 10px; /* Adiciona 10px de cada lado */
+    margin: 0 2px;
+}
+
+/* Adicionando um separador visual sutil entre os itens */
+#panel_window menubar > menuitem {
+    border-right: 1px solid alpha(#886dbf, 0.2);
+}
