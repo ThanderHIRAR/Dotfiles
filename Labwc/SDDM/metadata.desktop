@@ -1,0 +1,7 @@
+[SddmGreeterTheme]
+Name=OneShot
+Description=OneShot themed SDDM greeter
+Author=herbert
+Version=1.0
+License=MIT
+Type=sddm-theme
