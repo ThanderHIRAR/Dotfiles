@@ -37,5 +37,5 @@ Feel free to fork and use as you want.
 ---
 
 ### 🛠️ Current desktops
-* **LabWC:** 
-* **OpenBox:**
+* **LabWC** 
+* **OpenBox**
