@@ -11,22 +11,22 @@ Feel free to fork and use as you want.
   <table>
     <tr>
       <td valign="top" align="center">
-        <img src="https://github.com/ThanderHIRAR/Dotfiles/blob/main/screenshots/labwc3.png?raw=true" width="400px" alt="Labwc" />
+        <img src="https://github.com/ThanderHIRAR/Dotfiles/blob/main/screenshots/labwc3.png" width="400px" alt="Labwc" />
         <br />
         <sub><b>Labwc</b></sub>
       </td>
       <td valign="top" align="center">
-        <img src="https://github.com/ThanderHIRAR/Dotfiles/blob/main/screenshots/labwc1.png?raw=true" width="400px" alt="Labwc workflow" />
+        <img src="https://github.com/ThanderHIRAR/Dotfiles/blob/main/screenshots/labwc1.png" width="400px" alt="Labwc workflow" />
         <br />
         <sub><b>Labwc workflow</b></sub>
       </td>
       <td valign="top" align="center">
-        <img src="https://github.com/ThanderHIRAR/Dotfiles/blob/main/screenshots/openbox1.png?raw=true" width="400px" alt="Openbox" />
+        <img src="https://github.com/ThanderHIRAR/Dotfiles/blob/main/screenshots/openbox1.png" width="400px" alt="Openbox" />
         <br />
         <sub><b>Openbox</b></sub>
       </td>
       <td valign="top" align="center">
-        <img src="https://github.com/ThanderHIRAR/Dotfiles/blob/main/screenshots/openbox2.png?raw=true" width="400px" alt="Openbox workflow" />
+        <img src="https://github.com/ThanderHIRAR/Dotfiles/blob/main/screenshots/openbox2.png?" width="400px" alt="Openbox workflow" />
         <br />
         <sub><b>Openbox workflow</b></sub>
       </td>
