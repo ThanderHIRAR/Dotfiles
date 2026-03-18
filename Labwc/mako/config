@@ -1,0 +1,24 @@
+# Configuração Mako
+max-history=100
+sort=-time
+
+# Aparência
+font=monospace 10
+width=350
+height=150
+margin=10
+padding=15
+border-size=2
+border-color=#886dbf
+background-color=#0d0015
+text-color=#e2d5f2
+
+# Estilo da linha separadora (como na print)
+[urgency=normal]
+border-color=#6b3fa0
+default-timeout=5000
+
+# Arredondar ícones (opcional, para o avatar)
+border-radius=0
+
+on-notify=exec paplay --volume=42598 ~/Notificação.mp3
