@@ -25,6 +25,8 @@
         "custom/sep",
         "pulseaudio#mic",
         "custom/sep",
+        "custom/systemMonitor",
+        "custom/sep",
         "network",
         "custom/sep",
         "bluetooth",
@@ -126,6 +128,12 @@
         "format": "{}",
         "on-click": "playerctl play-pause",
         "max-length": 55,
+        "tooltip": false
+    },
+
+    "custom/systemMonitor": {
+        "format": " ",
+        "on-click": "/home/herbert/rofi-taskmaster.sh",
         "tooltip": false
     }
 }

@@ -82,3 +82,17 @@ window#waybar {
     margin: 4px 8px 4px 0px; /* 4px na direita para não colar na borda da barra */
     padding: 0px;
 }
+
+#custom-systemMonitor {
+    background-image: url("/home/herbert/Imagens/system-monitor-purple.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+    min-width: 28px; 
+    min-height: 28px;
+    
+    color: transparent;
+    margin: 0px 0px 4px 0px; /* 4px na direita para não colar na borda da barra */
+    padding: 0px;
+}
