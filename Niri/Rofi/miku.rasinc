@@ -1,0 +1,62 @@
+/* Configurações Globais (Variáveis) */
+* {
+    blue-1: #1E3E4A;
+    blue-2: #1B559E;
+    blue-3: #358AC7;
+    blue-4: #4FBEF0;
+    bg:         #0A0D11;
+    fg:         #FFFFFF;
+    
+    background-color: transparent;
+    text-color:       @fg;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+/* A Janela */
+window {
+    width:            45%;       /* 30% de 1280px fica ótimo */
+    background-color: @blue-1;
+    border:           2.4px;
+    border-color:     @blue-4;
+    border-radius:    14px;
+    padding:          10px;
+}
+
+/* Barra de Entrada */
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @blue-1;
+    border-radius:    4px;
+    padding:          5px;
+    margin:           0 0 10px 0;
+
+    /* Borda */
+    border: 2px solid;
+    border-color: #4FBEF0;
+}
+
+prompt {
+    text-color: @fg;
+    margin: 0 10px 0 0;
+}
+
+/* Lista de Apps */
+listview {
+    lines:      8;
+    scrollbar:  false;
+
+    /* Borda */
+    border: 2px solid;
+    border-color: #4FBEF0;
+}
+
+/* Cada App na lista */
+element {
+    padding: 5px;
+    border-radius: 4px;
+}
+
+element selected {
+    background-color: @blue-2;
+    text-color:       @bg;
+}

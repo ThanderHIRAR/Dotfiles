@@ -1,0 +1,7 @@
+[SddmGreeterTheme]
+Name=Miku
+Description=Hatsune Miku themed SDDM greeter
+Author=herbert
+Version=1.0
+License=MIT
+Type=sddm-theme
