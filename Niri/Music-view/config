@@ -1,0 +1,26 @@
+[general]
+bars = 6
+bar_width = 2
+bar_spacing = 2
+framerate = 60
+
+[color]
+gradient = 1
+gradient_count = 4
+gradient_color_1 = '#4FBEF0'
+gradient_color_2 = '#358AC7'
+gradient_color_3 = '#1B559E'
+gradient_color_4 = '#1E3E4A'
+
+foreground = '#4FBEF0'
+
+[smoothing]
+monstercat = 1
+waves = 1
+
+[eq]
+1 = 1
+2 = 1
+3 = 1
+4 = 1
+5 = 1

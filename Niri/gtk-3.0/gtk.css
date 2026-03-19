@@ -1,0 +1,184 @@
+/* ===================================================== */
+/* Hatsune Miku GTK — Tema Consolidado                   */
+/* ===================================================== */
+
+@define-color bg_main   #0d1f26;
+@define-color bg_alt    #0a1a3a;
+@define-color bg_hover  #1E3E4A;
+@define-color fg_main   #4FBEF0;
+@define-color fg_dim    #358AC7;
+@define-color accent    #4FBEF0;
+@define-color border_c  alpha(#4FBEF0, 0.5);
+
+/* ============================= */
+/* Base e Janelas                */
+/* ============================= */
+window, .background {
+    background-color: @bg_main;
+    color: @fg_main;
+}
+
+scrolledwindow, viewport {
+    background-color: @bg_main;
+    color: @fg_main;
+}
+
+/* ============================= */
+/* SELEÇÃO                       */
+/* ============================= */
+:selected,
+.view:selected,
+.view:selected:focus {
+    background-color: @accent;
+    color: #0d1f26;
+    font-weight: bold;
+}
+
+treeview.view:selected,
+iconview.view:selected,
+.sidebar row:selected {
+    background-color: @accent;
+    color: #0d1f26;
+}
+
+:selected image,
+.view:selected image,
+.sidebar row:selected image {
+    color: #0d1f26;
+}
+
+/* ============================= */
+/* Barras (Header/Toolbar)       */
+/* ============================= */
+headerbar {
+    background-color: @bg_alt;
+    color: @fg_main;
+    border-bottom: 2px solid @border_c;
+    box-shadow: none;
+}
+
+toolbar, statusbar {
+    background-color: @bg_alt;
+    color: @fg_main;
+    border-color: @border_c;
+}
+
+/* ============================= */
+/* Sidebar / Painéis Laterais    */
+/* ============================= */
+.sidebar, placessidebar {
+    background-color: @bg_alt;
+    border-right: 2px solid @border_c;
+    color: @fg_main;
+}
+
+.sidebar row {
+    padding: 4px 8px;
+    border-bottom: 1px solid alpha(#4FBEF0, 0.1);
+}
+
+.sidebar row:hover {
+    background-color: @bg_hover;
+}
+
+/* ============================= */
+/* Botões e Entradas             */
+/* ============================= */
+button {
+    background-color: @bg_alt;
+    color: @fg_main;
+    border: 1px solid @border_c;
+    border-radius: 6px;
+    padding: 5px 10px;
+    box-shadow: none;
+}
+
+button:hover {
+    background-color: @bg_hover;
+    border-color: @accent;
+}
+
+button:active, button:checked {
+    background-color: @accent;
+    color: @bg_main;
+}
+
+entry {
+    background-color: @bg_alt;
+    color: @fg_main;
+    border: 1px solid @border_c;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+entry:focus {
+    border-color: @accent;
+    box-shadow: 0 0 4px alpha(@accent, 0.4);
+}
+
+/* ============================= */
+/* Ícones Simbólicos             */
+/* ============================= */
+image.symbolic, .symbolic,
+toolbar image, button image {
+    color: @fg_dim;
+}
+
+/* ============================= */
+/* Separadores                   */
+/* ============================= */
+separator {
+    background-color: @border_c;
+    min-height: 1px;
+    min-width: 1px;
+}
+
+/* ============================= */
+/* Widgets (Checks/Sliders)      */
+/* ============================= */
+check, radio {
+    border: 1px solid @border_c;
+    background-color: @bg_alt;
+    border-radius: 4px;
+}
+
+radio { border-radius: 100%; }
+
+check:checked, radio:checked {
+    background-color: @accent;
+    color: @bg_main;
+}
+
+scale contents trough {
+    background-color: @bg_alt;
+    border: 1px solid @border_c;
+    border-radius: 10px;
+    min-height: 8px;
+}
+
+scale contents highlight {
+    background-color: @accent;
+    border-radius: 10px;
+}
+
+/* ============================= */
+/* Login / Panel                 */
+/* ============================= */
+#login_window {
+    background-color: @bg_main;
+    border: 2px solid @accent;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#panel_window {
+    background-color: @bg_alt;
+    border-bottom: 2px solid @accent;
+    color: @fg_main;
+}
+
+#panel_window menubar > menuitem {
+    padding: 0 10px;
+    margin: 0 2px;
+    border-right: 1px solid alpha(#4FBEF0, 0.2);
+}

@@ -1,0 +1,179 @@
+window#waybar {
+    /* Fonte e tamanho */
+    font-family: "Fira Code", "Symbols Nerd Font", sans-serif;
+    font-size: 12px;
+
+    /* Fundo transparente */
+    background-color: transparent;
+}
+
+/* Seleciona o módulo de workspaces do niri */
+#workspaces {
+    /* Fundo */
+    background-color: rgba(30, 62, 74, 0.6);
+    box-shadow: inset 0 0 10px rgba(79, 190, 240, 0.1);
+    /* Borda */
+    border: 2.4px solid rgba(79, 190, 240, 1);
+    border-radius: 16px;
+    /* Espaçamento */
+    padding: 0px 4px;
+}
+
+/* Estilo para CADA botão de workspace */
+#workspaces button {
+    background: none;       /* Mata a cor cinza do GTK */
+    box-shadow: none;       /* Remove o relevo 3D */
+    text-shadow: none;
+    color: #ffffff;         /* Texto branco */
+    transition: all 0.3s ease;
+    border-color: transparent;
+}
+
+/* Estilo para o workspace ativo */
+#workspaces button.focused {
+    background-color: rgba(79, 190, 240, 0.6); /* Cor de fundo para o workspace ativo */
+    color: #ffffff; /* Cor do texto para o workspace ativo */
+}
+
+/* Efeito ao passar o mouse */
+#workspaces button:hover {
+    background-color: rgba(53, 138, 199, 0.4);
+}
+
+#custom-mpris {
+    /* Fundo */
+    background-color: rgba(30, 62, 74, 0.6);
+    box-shadow: inset 0 0 10px rgba(79, 190, 240, 0.1);
+    /* Borda */
+    border: 2.4px solid rgba(79, 190, 240, 1);
+    border-radius: 16px;
+    /* Espaçamento */
+    padding: 0px 8px;            /* Aumentei um pouco o respiro lateral */
+    /* Cor do texto */
+    color: #ffffff;
+}
+
+#clockg {
+    /* Fundo */
+    background-color: rgba(30, 62, 74, 0.6);
+    box-shadow: inset 0 0 10px rgba(79, 190, 240, 0.1);
+
+    /* Borda */
+    border: 2.4px solid rgba(79, 190, 240, 1);
+    border-radius: 16px;
+    
+    /* Texto */
+    color: #ffffff;
+
+    /* Alinhamento e Espaçamento */
+    padding: 0px 8px;
+}
+
+#custom-clockchar {
+    padding-right: 2px;
+}
+
+#audio {
+    /* Fundo */
+    background-color: rgba(30, 62, 74, 0.6);
+    box-shadow: inset 0 0 10px rgba(79, 190, 240, 0.1);
+
+    /* Borda */
+    border: 2.4px solid rgba(79, 190, 240, 1);
+    border-radius: 16px;
+    
+    /* Texto */
+    color: #ffffff;
+
+    /* Alinhamento e Espaçamento */
+    padding: 0px 8px;
+}
+
+#tray {
+    /* Fundo */
+    background-color: rgba(30, 62, 74, 0.6);
+    box-shadow: inset 0 0 10px rgba(79, 190, 240, 0.1);
+
+    /* Borda */
+    border: 2.4px solid rgba(79, 190, 240, 1);
+    border-radius: 16px;
+    
+    /* Texto */
+    color: #ffffff;
+
+    /* Alinhamento e Espaçamento */
+    padding: 0px 8px;
+}
+
+#monitor {
+    /* Fundo */
+    background-color: rgba(30, 62, 74, 0.6);
+    box-shadow: inset 0 0 10px rgba(79, 190, 240, 0.1);
+
+    /* Borda */
+    border: 2.4px solid rgba(79, 190, 240, 1);
+    border-radius: 16px;
+    
+    /* Texto */
+    color: #ffffff;
+
+    /* Alinhamento e Espaçamento */
+    padding: 0px 8px;
+}
+
+#custom-systemMonitor {
+    background-image: url("/home/herbert/Imagens/miku-monitor.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    min-width: 25px; 
+    min-height: 25px;
+
+    color: transparent;
+    margin-bottom: 3px;
+}
+
+#custom-powerButton {
+    background-image: url("/home/herbert/Imagens/PBBlue.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    min-width: 22px; 
+    min-height: 22px;
+
+    color: transparent;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+#miku {
+    /* Fundo */
+    background-color: rgba(30, 62, 74, 0.6);
+    box-shadow: inset 0 0 10px rgba(79, 190, 240, 0.1);
+
+    /* Borda */
+    border: 2.4px solid rgba(79, 190, 240, 1);
+    border-radius: 16px;
+    
+    /* Texto */
+    color: #ffffff;
+
+    /* Alinhamento e Espaçamento */
+    padding: 0px 8px;
+}
+
+#custom-mikuicon {
+    background-image: url("/home/herbert/Imagens/miku-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    min-width: 22px; 
+    min-height: 22px;
+
+    border-radius: 16px;
+
+    color: transparent;
+}

@@ -1,0 +1,182 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 32, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 5, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "layer": "top",
+    "position": "top",
+
+    // Espaçamento
+    "margin-top": 8,
+    "margin-right": 6,
+    "margin-left": 6,
+
+    "modules-left": [
+        "niri/workspaces",
+        "custom/mpris"
+    ],
+    "modules-center": [
+        "group/clockg",
+        "group/miku"
+    ],
+    "modules-right": [
+        "group/audio",
+        "tray",
+        "group/monitor"
+    ],
+
+    // Grupos das ilhas
+    "group/audio": {
+        "orientation": "horizontal",
+        "modules": [
+        "pulseaudio#audio",
+        "custom/sep",
+        "pulseaudio#mic"
+        ]
+    },
+
+    "group/clockg": {
+        "orientation": "horizontal",
+        "modules": [
+        "custom/clockchar",
+        "clock"
+        ]
+    },
+
+    "group/monitor": {
+        "orientation": "horizontal",
+        "modules": [
+        "custom/systemMonitor",
+        "custom/sep",
+        "custom/powerButton"
+        ]
+    },
+
+    "group/miku": {
+        "orientation": "horizontal",
+        "on-click": "xdg-open 'https://www.youtube.com/@HatsuneMiku'",
+        "modules": [
+        "custom/mikumood",
+        "custom/sep",
+        "custom/mikuicon"
+        ]
+    },
+
+    /* Configurações dos módulos */
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "focused": "●",
+            "default": "○"
+        }
+    },
+
+    "custom/clockchar": {
+        "format": "󰃰",
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%H:%M:%S}", // Removido o format-alt aqui
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months":     "<span color='#4FBEF0'><b>{}</b></span>",   // Azul Miku Claro
+                "days":       "<span color='#ffffff'><b>{}</b></span>",   // Branco para dias
+                "weeks":      "<span color='#358AC7'><b>W{}</b></span>",  // Azul Miku Médio
+                "weekdays":   "<span color='#4FBEF0'><b>{}</b></span>",   // Ciano
+                "today":      "<span color='#1E3E4A' background='#4FBEF0'><b><u>{}</u></b></span>" // Destaque Miku
+            }
+        },
+        "actions": {
+            "on-click-right": "mode"
+        }
+    },
+
+    "custom/mpris": {
+        "exec": "/home/herbert/.config/waybar/player-status.sh",
+        "interval": 0.5,
+        "format": "{}",
+        "on-click": "playerctl play-pause",
+        "max-length": 55,
+        "tooltip": false
+    },
+
+    // Pulesaudio
+    "pulseaudio#mic": {
+        "format": "{format_source}",
+        "format-source": "<span font_size='8pt' rise='900'></span> {volume}%",
+        "format-source-muted": "<span font_size='8pt' rise='700'></span>Muted",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 1%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 1%-",
+
+        "tooltip": false,
+        "max-volume": 100,
+    },
+
+    "pulseaudio#audio": {
+        // texto
+        "format": "<span font_size='8pt' rise='700'>󰋋</span> {volume}%",
+        "format-muted": "<span font_size='8pt' rise='00'>󰝟</span> Muted",
+        //volume máximo
+        "max-volume": 100,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-",
+        "scroll-step": 1,
+        "tooltip": false
+    },
+
+    "custom/sep": {
+        "format": "|",
+        "tooltip": false
+    },
+
+    "custom/powerButton": {
+        "format": " ",
+        "on-click": "/home/herbert/powermenu.sh",
+        "tooltip": false
+    },
+
+    "custom/systemMonitor": {
+        "format": " ",
+        "on-click": "/home/herbert/rofi-taskmaster.sh",
+        "tooltip": false
+    },
+
+    "backlight/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal",
+    },
+
+    "tray": {
+       "icon-size": 14,
+       "spacing": 4,
+       "icons": {
+            "blueman": "bluetooth",
+        }
+    },
+
+    "custom/mikumood": {
+        // Um comando simples que apenas imprime uma frase aleatória
+        "exec": "printf '󰎆 Singing for you~\n󰎆 Digital Heart...\n󰎆 Miku Mode Active\n󰎆 Miku Miku Beam!' | shuf -n 1",        
+        "interval": 30,
+        "format": "{}",
+        "tooltip": false
+    },
+
+    "custom/mikuicon": {
+        "format": " ",
+        "tooltip": false
+    }
+
+}

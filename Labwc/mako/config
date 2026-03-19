@@ -1,24 +1,33 @@
-# Configuração Mako
+# Configuração Mako com a nova paleta
 max-history=100
 sort=-time
 
-# Aparência
+# Aparência geral
 font=monospace 10
 width=350
 height=150
 margin=10
 padding=15
 border-size=2
-border-color=#886dbf
-background-color=#0d0015
-text-color=#e2d5f2
+border-color=#4FBEF0        # Azul claro para borda principal
+background-color=#1E3E4A    # Azul petróleo escuro (fundo)
+text-color=#FFFFFF          # Branco para garantir contraste
+border-radius=8             # Leve arredondamento (opcional)
 
-# Estilo da linha separadora (como na print)
+# Normal (padrão)
 [urgency=normal]
-border-color=#6b3fa0
+border-color=#358AC7        # Azul médio
 default-timeout=5000
 
-# Arredondar ícones (opcional, para o avatar)
-border-radius=0
+# Crítica (se você usar)
+[urgency=critical]
+border-color=#1B559E        # Azul médio escuro (mais sério)
+default-timeout=0
 
+# Baixa (se quiser diferenciar)
+[urgency=low]
+border-color=#4FBEF0        # Azul claro, igual à borda principal
+default-timeout=5000
+
+# Som de notificação (mantido)
 on-notify=exec paplay --volume=42598 ~/Notificação.mp3

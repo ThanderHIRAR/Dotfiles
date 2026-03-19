@@ -1,0 +1,27 @@
+# Configuração Mako com alto contraste
+max-history=100
+sort=-time
+
+on-notify=exec paplay --volume=42598 /home/herbert/notify.mp3
+
+# Aparência geral
+font=monospace 10
+width=350
+height=150
+margin=10
+padding=15
+border-size=4                
+border-color=#4FBEF0         
+background-color=#1E3E4A      
+text-color=#FFFFFF            
+border-radius=8               
+
+# Urgência normal
+[urgency=normal]
+border-color=#4FBEF0          
+default-timeout=5000
+
+# Urgência crítica (se usar)
+[urgency=critical]
+border-color=#FF0000          
+default-timeout=0
