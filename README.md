@@ -29,15 +29,15 @@ Feel free to fork and use as you want.
     </tr>
     <tr>
       <td valign="top" align="center">
-        <img src="https://github.com/ThanderHIRAR/Dotfiles/blob/main/screenshots/niri1" width="400px" alt="Niri" />
+        <img src="https://github.com/ThanderHIRAR/Dotfiles/blob/main/screenshots/niri1.png" width="400px" alt="Niri" />
         <br /><sub><b>Niri</b></sub>
       </td>
       <td valign="top" align="center">
-        <img src="https://github.com/ThanderHIRAR/Dotfiles/blob/main/screenshots/niri2" width="400px" alt="Niri Wofi" />
+        <img src="https://github.com/ThanderHIRAR/Dotfiles/blob/main/screenshots/niri2.png" width="400px" alt="Niri Wofi" />
         <br /><sub><b>Niri Wofi</b></sub>
       </td>
       <td valign="top" align="center">
-        <img src="https://github.com/ThanderHIRAR/Dotfiles/blob/main/screenshots/niri3" width="400px" alt="Niri workflow" />
+        <img src="https://github.com/ThanderHIRAR/Dotfiles/blob/main/screenshots/niri3.png" width="400px" alt="Niri workflow" />
         <br /><sub><b>Niri workflow</b></sub>
       </td>
       <td></td>
