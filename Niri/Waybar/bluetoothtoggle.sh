@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# Checa se o rádio está ligado
-if bluetoothctl show | grep -q "Powered: yes"; then
-    bluetoothctl power off
-else
-    bluetoothctl power on
-fi
