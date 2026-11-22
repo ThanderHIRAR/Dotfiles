@@ -40,7 +40,6 @@ Feel free to fork and use as you want.
         <img src="https://github.com/ThanderHIRAR/Dotfiles/blob/main/screenshots/niri3.png" width="400px" alt="Niri (miku) workflow" />
         <br /><sub><b>Niri (Miku) workflow</b></sub>
       </td>
-      <td></td>
     </tr>
     <tr>
       <td valign="top" align="center">
