@@ -1,0 +1,189 @@
+/* ===================================================== */
+/* Kasane Teto GTK — Tema Consolidado                  */
+/* ===================================================== */
+
+@define-color bg_main   #1B191E;
+@define-color bg_alt    #662536;
+@define-color bg_hover  #3B0F1D;
+@define-color fg_main   #FFC8CE;
+@define-color fg_dim    #AAA9AF;
+@define-color accent    #B0304D;
+@define-color border_c  #B0304D;
+
+/* ============================= */
+/* Base e Janelas                */
+/* ============================= */
+window, .background {
+    background-color: @bg_main;
+    color: @fg_main;
+}
+
+scrolledwindow, viewport {
+    background-color: @bg_main;
+    color: @fg_main;
+}
+
+/* ============================= */
+/* SELEÇÃO                       */
+/* ============================= */
+:selected,
+.view:selected,
+.view:selected:focus {
+    background-color: @accent;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+treeview.view:selected,
+iconview.view:selected,
+.sidebar row:selected {
+    background-color: @accent;
+    color: #FFFFFF;
+}
+
+:selected image,
+.view:selected image,
+.sidebar row:selected image {
+    color: #FFFFFF;
+}
+
+/* ============================= */
+/* Barras (Header/Toolbar)       */
+/* ============================= */
+headerbar {
+    background-color: @bg_alt;
+    color: @fg_main;
+    border-bottom: 2px solid @border_c;
+    box-shadow: none;
+}
+
+toolbar, statusbar {
+    background-color: @bg_alt;
+    color: @fg_main;
+    border-color: @border_c;
+}
+
+/* ============================= */
+/* Sidebar / Painéis Laterais    */
+/* ============================= */
+.sidebar, placessidebar {
+    background-color: @bg_alt;
+    border-right: 2px solid @border_c;
+    color: @fg_main;
+}
+
+.sidebar row {
+    padding: 4px 8px;
+    border-bottom: 1px solid alpha(@border_c, 0.35);
+}
+
+.sidebar row:hover {
+    background-color: @bg_hover;
+    color: #FFFFFF;
+}
+
+/* ============================= */
+/* Botões e Entradas             */
+/* ============================= */
+button {
+    background-color: @bg_alt;
+    color: @fg_main;
+    border: 1px solid @border_c;
+    border-radius: 6px;
+    padding: 5px 10px;
+    box-shadow: none;
+}
+
+button:hover {
+    background-color: @bg_hover;
+    border-color: @fg_main;
+    color: #FFFFFF;
+}
+
+button:active, button:checked {
+    background-color: @accent;
+    border-color: @fg_main;
+    color: #FFFFFF;
+}
+
+entry {
+    background-color: @bg_alt;
+    color: @fg_main;
+    border: 1px solid @border_c;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+entry:focus {
+    border-color: @fg_main;
+    color: #FFFFFF;
+    box-shadow: 0 0 4px alpha(@fg_main, 0.35);
+}
+
+/* ============================= */
+/* Ícones Simbólicos             */
+/* ============================= */
+image.symbolic, .symbolic,
+toolbar image, button image {
+    color: @fg_main;
+}
+
+/* ============================= */
+/* Separadores                   */
+/* ============================= */
+separator {
+    background-color: @border_c;
+    min-height: 1px;
+    min-width: 1px;
+}
+
+/* ============================= */
+/* Widgets (Checks/Sliders)      */
+/* ============================= */
+check, radio {
+    border: 1px solid @border_c;
+    background-color: @bg_alt;
+    border-radius: 4px;
+}
+
+radio { border-radius: 100%; }
+
+check:checked, radio:checked {
+    background-color: @accent;
+    border-color: @fg_main;
+    color: #FFFFFF;
+}
+
+scale contents trough {
+    background-color: @bg_alt;
+    border: 1px solid @border_c;
+    border-radius: 10px;
+    min-height: 8px;
+}
+
+scale contents highlight {
+    background-color: @fg_main;
+    border-radius: 10px;
+}
+
+/* ============================= */
+/* Login / Panel                 */
+/* ============================= */
+#login_window {
+    background-color: @bg_main;
+    border: 2px solid @border_c;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#panel_window {
+    background-color: @bg_alt;
+    border-bottom: 2px solid @border_c;
+    color: @fg_main;
+}
+
+#panel_window menubar > menuitem {
+    padding: 0 10px;
+    margin: 0 2px;
+    border-right: 1px solid alpha(@border_c, 0.4);
+}

@@ -1,0 +1,61 @@
+/* Configurações Globais (Variáveis) */
+* {
+    teto-primary:   #B0304D;
+    teto-secondary: #662536;
+    teto-detail:    #FFC8CE;
+    bg:             #3C1620;
+    fg:             #FFC8CE;
+    
+    background-color: transparent;
+    text-color:       @fg;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+/* A Janela */
+window {
+    width:            45%;       /* 30% de 1280px fica ótimo */
+    background-color: @teto-secondary;
+    border:           2.4px;
+    border-color:     @teto-primary;
+    border-radius:    14px;
+    padding:          10px;
+}
+
+/* Barra de Entrada */
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @teto-secondary;
+    border-radius:    4px;
+    padding:          5px;
+    margin:           0 0 10px 0;
+
+    /* Borda */
+    border: 2px solid;
+    border-color: @teto-detail;
+}
+
+prompt {
+    text-color: @teto-detail;
+    margin: 0 10px 0 0;
+}
+
+/* Lista de Apps */
+listview {
+    lines:      8;
+    scrollbar:  false;
+
+    /* Borda */
+    border: 2px solid;
+    border-color: @teto-primary;
+}
+
+/* Cada App na lista */
+element {
+    padding: 5px;
+    border-radius: 4px;
+}
+
+element selected {
+    background-color: @teto-primary;
+    text-color:       @teto-detail;
+}

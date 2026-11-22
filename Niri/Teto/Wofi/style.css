@@ -1,0 +1,105 @@
+window {
+    font-family: "Symbols Nerd Font", "Sans";
+    background-color: transparent;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8), 0 0 16px rgba(176, 48, 77, 0.25);
+}
+
+#outer-box {
+    margin: 0;
+    padding: 12px;
+    background-color: #3C1620;
+    border: 2.4px solid #B0304D;
+    border-radius: 16px;
+}
+
+#input {
+    margin-bottom: 8px;
+    border: 2px solid #B0304D;
+    border-radius: 12px;
+    background-color: #662536;
+    color: #FFC8CE;
+    padding: 8px 12px;
+    box-shadow: inset 0 0 8px rgba(255, 200, 206, 0.15);
+}
+
+#input:focus {
+    border-color: #FFC8CE;
+    box-shadow: inset 0 0 12px rgba(255, 200, 206, 0.25), 0 0 6px rgba(176, 48, 77, 0.45);
+}
+
+#scroll {
+    background-color: transparent;
+}
+
+#inner-box {
+    border: none;
+    border-top: 1.5px solid #B0304D;
+    padding-top: 6px;
+    background-color: #3C1620;
+}
+
+scrollbar {
+    background-color: #662536;
+    border-radius: 10px;
+    border-left: 1px solid #B0304D;
+    width: 10px;
+}
+
+scrollbar button {
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: transparent;
+}
+
+scrollbar slider {
+    background-color: #B0304D;
+    border-radius: 10px;
+    min-height: 30px;
+    margin: 2px;
+}
+
+scrollbar slider:hover {
+    background-color: #FFC8CE;
+}
+
+#entry {
+    background-color: transparent;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border-left: 2px solid transparent;
+}
+
+#entry:hover {
+    background-color: rgba(102, 37, 54, 0.45);
+    border-left: 2px solid #B0304D;
+}
+
+#entry:selected {
+    background: linear-gradient(90deg, #662536, #B0304D);
+    border-left: 2px solid #FFC8CE;
+    border-radius: 8px;
+}
+
+#text {
+    color: #FFC8CE;
+    margin-left: 10px;
+}
+
+#text:selected {
+    background-color: transparent;
+    color: #FFC8CE;
+    font-weight: bold;
+}
+
+#img {
+    background-color: transparent;
+}
+
+#entry:selected #text {
+    color: #FFC8CE;
+    font-weight: bold;
+}

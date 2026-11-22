@@ -56,8 +56,8 @@ input {
     mouse {
         // off
         // natural-scroll
-        // accel-speed 0.2
-        // accel-profile "flat"
+        accel-speed 0.5
+        accel-profile "flat"
         // scroll-method "no-scroll"
     }
 
@@ -286,16 +286,17 @@ spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 // 3. Sistema e Hardware
 spawn-sh-at-startup "wlr-randr --output DP-1 --mode 1280x1024@75.025 &"
-spawn-sh-at-startup "sudo /usr/local/bin/mouse-media.py &"
 spawn-sh-at-startup "xhost +si:localuser:root &"
 
 // 4. Visual (Wallpaper e Waybar)
-spawn-sh-at-startup "swaybg -i /home/herbert/Imagens/Wallpapers/Vocaloid-Hatsune-Miku.jpg -m fill &"
+spawn-sh-at-startup "swaybg -i /home/herbert/Imagens/Wallpapers/kasane-teto-guitar-sakura-blossom-4k-wallpaper.png -m fill &"
 spawn-at-startup "waybar"
 
 // 5. Apps que dependem da senha
-spawn-at-startup "kclockd"
-spawn-at-startup "rustdesk"
+spawn-at-startup "kclock"
+spawn-at-startup "siyuan"
+
+spawn-at-startup "protonvpn-app"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -395,7 +396,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
@@ -408,9 +409,9 @@ binds {
     // The allow-when-locked=true property makes them work even when the session is locked.
     // Using spawn-sh allows to pass multiple arguments together with the command.
     // "-l 1.0" limits the volume to 100%.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+ -l 1.0"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01-"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
     // Example media keys mapping using playerctl.
@@ -635,6 +636,8 @@ binds {
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
+
+    Mod+shift+S { screenshot; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here

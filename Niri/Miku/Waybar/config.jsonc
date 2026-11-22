@@ -80,7 +80,7 @@
     },
 
     "clock": {
-        "format": "{:%H:%M:%S}", // Removido o format-alt aqui
+        "format": "{:%H:%M}", // Removido o format-alt aqui
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "year",
@@ -105,7 +105,7 @@
         "interval": 0.5,
         "format": "{}",
         "on-click": "playerctl play-pause",
-        "max-length": 55,
+        "max-length": 35,
         "tooltip": false
     },
 

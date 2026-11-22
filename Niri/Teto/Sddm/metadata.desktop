@@ -1,0 +1,7 @@
+[SddmGreeterTheme]
+Name=Teto
+Description=Kasane Teto themed SDDM greeter
+Author=herbert
+Version=1.0
+License=MIT
+Type=sddm-theme
