@@ -64,3 +64,7 @@ Feel free to fork and use as you want.
 * **LabWC** 
 * **OpenBox**
 * **Niri**
+
+### ‼️ Disclaimer
+
+I used AI to help me do some parts of the styles.css, changing the colours and matching the parts, to do the GTK themes and code the music-view. Nonetheless, the other parts, the waybar configuration and all the images are completely human made.
